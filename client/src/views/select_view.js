@@ -22,10 +22,10 @@ class SelectView{
   }
 
   populate(instrumentFamilyData){
-    instrumentFamilyData.forEach((family, index) => {
-      console.log("Here is the final log family:", family);
+    instrumentFamilyData.forEach(({name}, index) => {
+      // console.log("Here is the final log family:", family);
       const option = document.createElement('option');
-      option.textContent = family.name;
+      option.textContent = name;
       option.value = index;
       this.element.appendChild(option);
     });
